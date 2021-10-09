@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\TestProject.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{1B86D5BA-9977-4E80-9067-31AA66F17FCE}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\TestProject.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\TestProjectEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{A9038BD8-3046-48AB-82F0-90737A0F15A3}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\JsonParser">
+      <UniqueIdentifier>{5BBE74E6-FDA6-403C-9FE8-625A13512DCA}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\JsonParser\JsonCore.cpp">
+      <Filter>Source\JsonParser</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\JsonParser\JsonCore.h">
+      <Filter>Source\JsonParser</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\JsonParser\JsonParser.Build.cs">
+      <Filter>Source\JsonParser</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\JsonParser\JsonParser.cpp">
+      <Filter>Source\JsonParser</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\JsonParser\JsonParser.h">
+      <Filter>Source\JsonParser</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\JsonParser\TestActorA.cpp">
+      <Filter>Source\JsonParser</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\JsonParser\TestActorA.h">
+      <Filter>Source\JsonParser</Filter>
+    </ClInclude>
+    <Filter Include="Source\JsonParser\Private">
+      <UniqueIdentifier>{DA61CFBB-732D-4D25-8DD1-2592A6F01A08}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\JsonParser\Private\JsonDocument.cpp">
+      <Filter>Source\JsonParser\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\JsonParser\Public">
+      <UniqueIdentifier>{D9266464-825B-45FE-A60C-C598D6B6AB14}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\JsonParser\Public\JsonDocument.h">
+      <Filter>Source\JsonParser\Public</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProceduralMapGenerator">
+      <UniqueIdentifier>{41560D1A-EA75-478E-86C5-2BA75BA6A197}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProceduralMapGenerator\MapGenerator.cpp">
+      <Filter>Source\ProceduralMapGenerator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProceduralMapGenerator\MapGenerator.h">
+      <Filter>Source\ProceduralMapGenerator</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\ProceduralMapGenerator\ProceduralMapGenerator.Build.cs">
+      <Filter>Source\ProceduralMapGenerator</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\ProceduralMapGenerator\ProceduralMapGenerator.cpp">
+      <Filter>Source\ProceduralMapGenerator</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProceduralMapGenerator\ProceduralMapGenerator.h">
+      <Filter>Source\ProceduralMapGenerator</Filter>
+    </ClInclude>
+    <Filter Include="Source\TestProject">
+      <UniqueIdentifier>{39FDB426-6E8B-4F8C-89AC-5993134C5CFA}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\TestProject\TestProject.Build.cs">
+      <Filter>Source\TestProject</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\TestProject\TestProject.cpp">
+      <Filter>Source\TestProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestProject\TestProject.h">
+      <Filter>Source\TestProject</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TestProject\TestProjectCharacter.cpp">
+      <Filter>Source\TestProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestProject\TestProjectCharacter.h">
+      <Filter>Source\TestProject</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TestProject\TestProjectGameMode.cpp">
+      <Filter>Source\TestProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestProject\TestProjectGameMode.h">
+      <Filter>Source\TestProject</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
