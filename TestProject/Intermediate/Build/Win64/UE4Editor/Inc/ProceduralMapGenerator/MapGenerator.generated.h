@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PROCEDURALMAPGENERATOR_MapGenerator_generated_h
 
-#define TestProject_Source_ProceduralMapGenerator_MapGenerator_h_15_SPARSE_DATA
-#define TestProject_Source_ProceduralMapGenerator_MapGenerator_h_15_RPC_WRAPPERS
-#define TestProject_Source_ProceduralMapGenerator_MapGenerator_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define TestProject_Source_ProceduralMapGenerator_MapGenerator_h_15_INCLASS_NO_PURE_DECLS \
+#define TestProject_Source_ProceduralMapGenerator_MapGenerator_h_17_SPARSE_DATA
+#define TestProject_Source_ProceduralMapGenerator_MapGenerator_h_17_RPC_WRAPPERS
+#define TestProject_Source_ProceduralMapGenerator_MapGenerator_h_17_RPC_WRAPPERS_NO_PURE_DECLS
+#define TestProject_Source_ProceduralMapGenerator_MapGenerator_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMapGenerator(); \
 	friend struct Z_Construct_UClass_AMapGenerator_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(AMapGenerator)
 
 
-#define TestProject_Source_ProceduralMapGenerator_MapGenerator_h_15_INCLASS \
+#define TestProject_Source_ProceduralMapGenerator_MapGenerator_h_17_INCLASS \
 private: \
 	static void StaticRegisterNativesAMapGenerator(); \
 	friend struct Z_Construct_UClass_AMapGenerator_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(AMapGenerator)
 
 
-#define TestProject_Source_ProceduralMapGenerator_MapGenerator_h_15_STANDARD_CONSTRUCTORS \
+#define TestProject_Source_ProceduralMapGenerator_MapGenerator_h_17_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AMapGenerator(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AMapGenerator) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define TestProject_Source_ProceduralMapGenerator_MapGenerator_h_15_ENHANCED_CONSTRUCTORS \
+#define TestProject_Source_ProceduralMapGenerator_MapGenerator_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AMapGenerator(AMapGenerator&&); \
@@ -58,28 +58,28 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AMapGenerator); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AMapGenerator)
 
 
-#define TestProject_Source_ProceduralMapGenerator_MapGenerator_h_15_PRIVATE_PROPERTY_OFFSET
-#define TestProject_Source_ProceduralMapGenerator_MapGenerator_h_12_PROLOG
-#define TestProject_Source_ProceduralMapGenerator_MapGenerator_h_15_GENERATED_BODY_LEGACY \
+#define TestProject_Source_ProceduralMapGenerator_MapGenerator_h_17_PRIVATE_PROPERTY_OFFSET
+#define TestProject_Source_ProceduralMapGenerator_MapGenerator_h_14_PROLOG
+#define TestProject_Source_ProceduralMapGenerator_MapGenerator_h_17_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TestProject_Source_ProceduralMapGenerator_MapGenerator_h_15_PRIVATE_PROPERTY_OFFSET \
-	TestProject_Source_ProceduralMapGenerator_MapGenerator_h_15_SPARSE_DATA \
-	TestProject_Source_ProceduralMapGenerator_MapGenerator_h_15_RPC_WRAPPERS \
-	TestProject_Source_ProceduralMapGenerator_MapGenerator_h_15_INCLASS \
-	TestProject_Source_ProceduralMapGenerator_MapGenerator_h_15_STANDARD_CONSTRUCTORS \
+	TestProject_Source_ProceduralMapGenerator_MapGenerator_h_17_PRIVATE_PROPERTY_OFFSET \
+	TestProject_Source_ProceduralMapGenerator_MapGenerator_h_17_SPARSE_DATA \
+	TestProject_Source_ProceduralMapGenerator_MapGenerator_h_17_RPC_WRAPPERS \
+	TestProject_Source_ProceduralMapGenerator_MapGenerator_h_17_INCLASS \
+	TestProject_Source_ProceduralMapGenerator_MapGenerator_h_17_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define TestProject_Source_ProceduralMapGenerator_MapGenerator_h_15_GENERATED_BODY \
+#define TestProject_Source_ProceduralMapGenerator_MapGenerator_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TestProject_Source_ProceduralMapGenerator_MapGenerator_h_15_PRIVATE_PROPERTY_OFFSET \
-	TestProject_Source_ProceduralMapGenerator_MapGenerator_h_15_SPARSE_DATA \
-	TestProject_Source_ProceduralMapGenerator_MapGenerator_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	TestProject_Source_ProceduralMapGenerator_MapGenerator_h_15_INCLASS_NO_PURE_DECLS \
-	TestProject_Source_ProceduralMapGenerator_MapGenerator_h_15_ENHANCED_CONSTRUCTORS \
+	TestProject_Source_ProceduralMapGenerator_MapGenerator_h_17_PRIVATE_PROPERTY_OFFSET \
+	TestProject_Source_ProceduralMapGenerator_MapGenerator_h_17_SPARSE_DATA \
+	TestProject_Source_ProceduralMapGenerator_MapGenerator_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	TestProject_Source_ProceduralMapGenerator_MapGenerator_h_17_INCLASS_NO_PURE_DECLS \
+	TestProject_Source_ProceduralMapGenerator_MapGenerator_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

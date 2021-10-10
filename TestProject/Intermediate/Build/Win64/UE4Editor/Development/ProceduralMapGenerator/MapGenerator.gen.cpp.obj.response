@@ -31,6 +31,7 @@
 /wd4244
 /wd4838
 /I .
+/I C:\Git\Sample_Unreal_Parser\TestProject\Source\ProceduralMapGenerator\Private
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\Engine
 /I Runtime
 /I Runtime\Engine\Classes

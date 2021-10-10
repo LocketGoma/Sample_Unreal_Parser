@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\TestProject.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{1B86D5BA-9977-4E80-9067-31AA66F17FCE}</UniqueIdentifier>
+      <UniqueIdentifier>{0FF73A6D-7D06-40D2-95C4-B47F6F72088C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TestProject.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{A9038BD8-3046-48AB-82F0-90737A0F15A3}</UniqueIdentifier>
+      <UniqueIdentifier>{9A35D930-25FC-444F-9EC2-751EC6EE54CC}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +30,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\JsonParser">
-      <UniqueIdentifier>{5BBE74E6-FDA6-403C-9FE8-625A13512DCA}</UniqueIdentifier>
+      <UniqueIdentifier>{32EF7F4D-8B13-4E5E-9AA4-1912C3EFE4C7}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\JsonParser\JsonCore.cpp">
       <Filter>Source\JsonParser</Filter>
@@ -54,19 +54,19 @@
       <Filter>Source\JsonParser</Filter>
     </ClInclude>
     <Filter Include="Source\JsonParser\Private">
-      <UniqueIdentifier>{DA61CFBB-732D-4D25-8DD1-2592A6F01A08}</UniqueIdentifier>
+      <UniqueIdentifier>{D167A8EC-0851-4DC7-9E9B-838211AAA197}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\JsonParser\Private\JsonDocument.cpp">
       <Filter>Source\JsonParser\Private</Filter>
     </ClCompile>
     <Filter Include="Source\JsonParser\Public">
-      <UniqueIdentifier>{D9266464-825B-45FE-A60C-C598D6B6AB14}</UniqueIdentifier>
+      <UniqueIdentifier>{C655685F-6740-4AC2-B0B6-A952099D5F0E}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\JsonParser\Public\JsonDocument.h">
       <Filter>Source\JsonParser\Public</Filter>
     </ClInclude>
     <Filter Include="Source\ProceduralMapGenerator">
-      <UniqueIdentifier>{41560D1A-EA75-478E-86C5-2BA75BA6A197}</UniqueIdentifier>
+      <UniqueIdentifier>{1B8DD7FD-D339-4BCC-B55C-E49639187BB2}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\ProceduralMapGenerator\MapGenerator.cpp">
       <Filter>Source\ProceduralMapGenerator</Filter>
@@ -83,8 +83,23 @@
     <ClInclude Include="..\..\Source\ProceduralMapGenerator\ProceduralMapGenerator.h">
       <Filter>Source\ProceduralMapGenerator</Filter>
     </ClInclude>
+    <Filter Include="Source\ProceduralMapGenerator\Private">
+      <UniqueIdentifier>{64930424-468B-48D9-8F83-1212EE721A15}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProceduralMapGenerator\Private\PMGBinaryTree.cpp">
+      <Filter>Source\ProceduralMapGenerator\Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProceduralMapGenerator\Private\PMGBinaryTree.h">
+      <Filter>Source\ProceduralMapGenerator\Private</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProceduralMapGenerator\Private\PMGBinaryTreeNode.cpp">
+      <Filter>Source\ProceduralMapGenerator\Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProceduralMapGenerator\Private\PMGBinaryTreeNode.h">
+      <Filter>Source\ProceduralMapGenerator\Private</Filter>
+    </ClInclude>
     <Filter Include="Source\TestProject">
-      <UniqueIdentifier>{39FDB426-6E8B-4F8C-89AC-5993134C5CFA}</UniqueIdentifier>
+      <UniqueIdentifier>{0174F1D3-94DC-4D65-871A-F88135E4573B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TestProject\TestProject.Build.cs">
       <Filter>Source\TestProject</Filter>

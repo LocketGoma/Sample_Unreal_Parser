@@ -34,6 +34,8 @@
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN
 "C:\Git\Sample_Unreal_Parser\TestProject\Intermediate\Build\Win64\TestProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Git\Sample_Unreal_Parser\TestProject\Intermediate\Build\Win64\UE4Editor\Development\ProceduralMapGenerator\PMGBinaryTree.cpp.obj"
+"C:\Git\Sample_Unreal_Parser\TestProject\Intermediate\Build\Win64\UE4Editor\Development\ProceduralMapGenerator\PMGBinaryTreeNode.cpp.obj"
 "C:\Git\Sample_Unreal_Parser\TestProject\Intermediate\Build\Win64\UE4Editor\Development\ProceduralMapGenerator\MapGenerator.cpp.obj"
 "C:\Git\Sample_Unreal_Parser\TestProject\Intermediate\Build\Win64\UE4Editor\Development\ProceduralMapGenerator\ProceduralMapGenerator.cpp.obj"
 "C:\Git\Sample_Unreal_Parser\TestProject\Intermediate\Build\Win64\UE4Editor\Development\ProceduralMapGenerator\MapGenerator.gen.cpp.obj"
