@@ -184,7 +184,7 @@ bool PMGMapGenerator::GenerateRoomNodeRecursively(uint32 depth, uint32 maxDepth,
 
 	if (false == GenerateRoomNodeRecursively(depth + 1, maxDepth, nowNode->GetLeftNode()))
 	{
-		RoomData tempRoomData = nowNode->GetLeftNode()->GetRoomData();
+		RoomData tempRoomData = roomData;
 
 		tempRoomData._minVector.X += _makeInterval;
 		tempRoomData._minVector.Y += _makeInterval;
@@ -195,7 +195,7 @@ bool PMGMapGenerator::GenerateRoomNodeRecursively(uint32 depth, uint32 maxDepth,
 	}
 	if (false == GenerateRoomNodeRecursively(depth + 1, maxDepth, nowNode->GetRightNode()))
 	{
-		RoomData tempRoomData = nowNode->GetRightNode()->GetRoomData();
+		RoomData tempRoomData = roomData;
 
 		tempRoomData._minVector.X += _makeInterval;
 		tempRoomData._minVector.Y += _makeInterval;

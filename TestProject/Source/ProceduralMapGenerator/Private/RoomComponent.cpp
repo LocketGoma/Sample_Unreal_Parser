@@ -39,5 +39,6 @@ void URoomComponent::SetRoomData(RoomData& roomdata)
 void URoomComponent::SetTransformFromRoomData()
 {
 	GetOwner()->GetRootComponent()->SetRelativeScale3D(FVector(_roomData._maxVector.X - _roomData._minVector.X, _roomData._maxVector.Y - _roomData._minVector.Y, _roomData._maxVector.Z - _roomData._minVector.Z));
+	GetOwner()->GetRootComponent()->SetUsingAbsoluteScale(true);
 }
 
