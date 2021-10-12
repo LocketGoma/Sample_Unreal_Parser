@@ -9,11 +9,11 @@ PMGBinaryTree::PMGBinaryTree()
 
 PMGBinaryTree::~PMGBinaryTree()
 {
-	_root->destroy();
+	_root->Destroy();
 	delete _root;
 }
 
-const PMGBinaryTreeNode* PMGBinaryTree::getRoot()
+PMGBinaryTreeNode* PMGBinaryTree::getRoot()
 {
 	return _root;
 }
@@ -35,6 +35,6 @@ void PMGBinaryTree::PreOrderTraversal(PMGBinaryTreeNode* Node)
 	{
 		return;
 	}
-	PreOrderTraversal(Node->getLeftNode());
-	PreOrderTraversal(Node->getRightNode());
+	PreOrderTraversal(Node->GetLeftNode());
+	PreOrderTraversal(Node->GetRightNode());
 }

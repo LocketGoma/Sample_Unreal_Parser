@@ -16,8 +16,8 @@ public:
 	~PMGBinaryTree();
 
 public:
-	const PMGBinaryTreeNode*	getRoot();
-	bool						setRoot(PMGBinaryTreeNode* root);
+	PMGBinaryTreeNode*	getRoot();
+	bool				setRoot(PMGBinaryTreeNode* root);
 	
 public:
 	void PreOrderTraversal(PMGBinaryTreeNode* Node);

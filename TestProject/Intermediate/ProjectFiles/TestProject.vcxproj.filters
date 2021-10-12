@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\TestProject.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{0FF73A6D-7D06-40D2-95C4-B47F6F72088C}</UniqueIdentifier>
+      <UniqueIdentifier>{4E72B81B-0E44-4F78-B818-455C68E13649}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TestProject.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{9A35D930-25FC-444F-9EC2-751EC6EE54CC}</UniqueIdentifier>
+      <UniqueIdentifier>{A85DB838-2FEB-434D-8A7F-80B0B2DE551D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +30,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\JsonParser">
-      <UniqueIdentifier>{32EF7F4D-8B13-4E5E-9AA4-1912C3EFE4C7}</UniqueIdentifier>
+      <UniqueIdentifier>{84E78F6C-188C-46AB-B2AC-5B9336A4358C}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\JsonParser\JsonCore.cpp">
       <Filter>Source\JsonParser</Filter>
@@ -54,26 +54,20 @@
       <Filter>Source\JsonParser</Filter>
     </ClInclude>
     <Filter Include="Source\JsonParser\Private">
-      <UniqueIdentifier>{D167A8EC-0851-4DC7-9E9B-838211AAA197}</UniqueIdentifier>
+      <UniqueIdentifier>{6036E274-FBA4-4274-B379-8201B5E06358}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\JsonParser\Private\JsonDocument.cpp">
       <Filter>Source\JsonParser\Private</Filter>
     </ClCompile>
     <Filter Include="Source\JsonParser\Public">
-      <UniqueIdentifier>{C655685F-6740-4AC2-B0B6-A952099D5F0E}</UniqueIdentifier>
+      <UniqueIdentifier>{2CB4DAC5-7FF0-4C20-BA1D-73D77478E460}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\JsonParser\Public\JsonDocument.h">
       <Filter>Source\JsonParser\Public</Filter>
     </ClInclude>
     <Filter Include="Source\ProceduralMapGenerator">
-      <UniqueIdentifier>{1B8DD7FD-D339-4BCC-B55C-E49639187BB2}</UniqueIdentifier>
+      <UniqueIdentifier>{39BCFBD0-AF16-4467-815D-A4467AB8C627}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\ProceduralMapGenerator\MapGenerator.cpp">
-      <Filter>Source\ProceduralMapGenerator</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ProceduralMapGenerator\MapGenerator.h">
-      <Filter>Source\ProceduralMapGenerator</Filter>
-    </ClInclude>
     <None Include="..\..\Source\ProceduralMapGenerator\ProceduralMapGenerator.Build.cs">
       <Filter>Source\ProceduralMapGenerator</Filter>
     </None>
@@ -84,7 +78,7 @@
       <Filter>Source\ProceduralMapGenerator</Filter>
     </ClInclude>
     <Filter Include="Source\ProceduralMapGenerator\Private">
-      <UniqueIdentifier>{64930424-468B-48D9-8F83-1212EE721A15}</UniqueIdentifier>
+      <UniqueIdentifier>{09536EAC-1224-4BE8-979D-0A287B6191C4}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\ProceduralMapGenerator\Private\PMGBinaryTree.cpp">
       <Filter>Source\ProceduralMapGenerator\Private</Filter>
@@ -98,8 +92,23 @@
     <ClInclude Include="..\..\Source\ProceduralMapGenerator\Private\PMGBinaryTreeNode.h">
       <Filter>Source\ProceduralMapGenerator\Private</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProceduralMapGenerator\Private\PMGMapGenerator.cpp">
+      <Filter>Source\ProceduralMapGenerator\Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProceduralMapGenerator\Private\PMGMapGenerator.h">
+      <Filter>Source\ProceduralMapGenerator\Private</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProceduralMapGenerator\Private\PMGMapManager.cpp">
+      <Filter>Source\ProceduralMapGenerator\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\ProceduralMapGenerator\Public">
+      <UniqueIdentifier>{3C3A69F9-AA48-4A1C-B867-53BA75BB1B3A}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ProceduralMapGenerator\Public\PMGMapManager.h">
+      <Filter>Source\ProceduralMapGenerator\Public</Filter>
+    </ClInclude>
     <Filter Include="Source\TestProject">
-      <UniqueIdentifier>{0174F1D3-94DC-4D65-871A-F88135E4573B}</UniqueIdentifier>
+      <UniqueIdentifier>{43A1AE7A-4FA5-4531-A5C4-373031AACB2E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TestProject\TestProject.Build.cs">
       <Filter>Source\TestProject</Filter>

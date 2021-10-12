@@ -23,3 +23,5 @@ public:
 	FVector _maxVector;
 
 }RoomData;
+
+typedef TArray<RoomData> RoomArray;

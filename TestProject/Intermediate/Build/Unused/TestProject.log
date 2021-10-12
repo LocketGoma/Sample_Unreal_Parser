@@ -3,44 +3,45 @@
   Creating makefile for TestProjectEditor (no existing makefile)
   Parsing headers for TestProjectEditor
     Running UnrealHeaderTool "C:\Git\Sample_Unreal_Parser\TestProject\TestProject.uproject" "C:\Git\Sample_Unreal_Parser\TestProject\Intermediate\Build\Win64\TestProjectEditor\Development\TestProjectEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\LocketGoma\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
-  Reflection code generated for TestProjectEditor in 3.0181289 seconds
+  Reflection code generated for TestProjectEditor in 2.9335739 seconds
   Building TestProjectEditor...
   Using Visual Studio 2019 14.29.30040 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 29 actions with 8 processes...
-    [1/29] Default.rc2
-    [2/29] Default.rc2
-    [3/29] Default.rc2
-    [4/29] SharedPCH.Engine.ShadowErrors.cpp
-    [5/29] PMGBinaryTreeNode.cpp
-    [6/29] PMGBinaryTree.cpp
-    [7/29] ProceduralMapGenerator.cpp
-    [8/29] ProceduralMapGenerator.init.gen.cpp
-    [9/29] TestActorA.gen.cpp
-    [10/29] TestProjectCharacter.gen.cpp
-    [11/29] TestActorA.cpp
-    [12/29] TestProject.cpp
-    [13/29] JsonDocument.cpp
-    [14/29] TestProjectGameMode.cpp
-    [15/29] TestProjectGameMode.gen.cpp
-    [16/29] JsonCore.cpp
-    [17/29] JsonParser.cpp
-    [18/29] TestProject.init.gen.cpp
-    [19/29] JsonParser.init.gen.cpp
-    [20/29] TestProjectCharacter.cpp
-    [21/29] UE4Editor-JsonParser.lib
+  Building 30 actions with 8 processes...
+    [1/30] Default.rc2
+    [2/30] Default.rc2
+    [3/30] Default.rc2
+    [4/30] SharedPCH.Engine.ShadowErrors.cpp
+    [5/30] JsonDocument.cpp
+    [6/30] PMGBinaryTreeNode.cpp
+    [7/30] JsonParser.init.gen.cpp
+    [8/30] TestActorA.gen.cpp
+    [9/30] TestProjectCharacter.gen.cpp
+    [10/30] TestProjectGameMode.cpp
+    [11/30] ProceduralMapGenerator.init.gen.cpp
+    [12/30] TestActorA.cpp
+    [13/30] JsonParser.cpp
+    [14/30] TestProject.cpp
+    [15/30] PMGBinaryTree.cpp
+    [16/30] TestProject.init.gen.cpp
+    [17/30] JsonCore.cpp
+    [18/30] UE4Editor-JsonParser.lib
        C:\Git\Sample_Unreal_Parser\TestProject\Intermediate\Build\Win64\UE4Editor\Development\JsonParser\UE4Editor-JsonParser.lib 라이브러리 및 C:\Git\Sample_Unreal_Parser\TestProject\Intermediate\Build\Win64\UE4Editor\Development\JsonParser\UE4Editor-JsonParser.exp 개체를 생성하고 있습니다.
-    [22/29] UE4Editor-TestProject.lib
+    [19/30] ProceduralMapGenerator.cpp
+    [20/30] TestProjectCharacter.cpp
+    [21/30] TestProjectGameMode.gen.cpp
+    [22/30] UE4Editor-TestProject.lib
        C:\Git\Sample_Unreal_Parser\TestProject\Intermediate\Build\Win64\UE4Editor\Development\TestProject\UE4Editor-TestProject.lib 라이브러리 및 C:\Git\Sample_Unreal_Parser\TestProject\Intermediate\Build\Win64\UE4Editor\Development\TestProject\UE4Editor-TestProject.exp 개체를 생성하고 있습니다.
-    [23/29] UE4Editor-JsonParser.dll
+    [23/30] UE4Editor-JsonParser.dll
        C:\Git\Sample_Unreal_Parser\TestProject\Intermediate\Build\Win64\UE4Editor\Development\JsonParser\UE4Editor-JsonParser.suppressed.lib 라이브러리 및 C:\Git\Sample_Unreal_Parser\TestProject\Intermediate\Build\Win64\UE4Editor\Development\JsonParser\UE4Editor-JsonParser.suppressed.exp 개체를 생성하고 있습니다.
-    [24/29] UE4Editor-TestProject.dll
+    [24/30] UE4Editor-TestProject.dll
        C:\Git\Sample_Unreal_Parser\TestProject\Intermediate\Build\Win64\UE4Editor\Development\TestProject\UE4Editor-TestProject.suppressed.lib 라이브러리 및 C:\Git\Sample_Unreal_Parser\TestProject\Intermediate\Build\Win64\UE4Editor\Development\TestProject\UE4Editor-TestProject.suppressed.exp 개체를 생성하고 있습니다.
-    [25/29] MapGenerator.cpp
-    [26/29] MapGenerator.gen.cpp
-    [27/29] UE4Editor-ProceduralMapGenerator.lib
+    [25/30] PMGMapManager.cpp
+    [26/30] PMGMapGenerator.cpp
+    [27/30] PMGMapManager.gen.cpp
+    [28/30] UE4Editor-ProceduralMapGenerator.lib
        C:\Git\Sample_Unreal_Parser\TestProject\Intermediate\Build\Win64\UE4Editor\Development\ProceduralMapGenerator\UE4Editor-ProceduralMapGenerator.lib 라이브러리 및 C:\Git\Sample_Unreal_Parser\TestProject\Intermediate\Build\Win64\UE4Editor\Development\ProceduralMapGenerator\UE4Editor-ProceduralMapGenerator.exp 개체를 생성하고 있습니다.
-    [28/29] UE4Editor-ProceduralMapGenerator.dll
+    [29/30] UE4Editor-ProceduralMapGenerator.dll
        C:\Git\Sample_Unreal_Parser\TestProject\Intermediate\Build\Win64\UE4Editor\Development\ProceduralMapGenerator\UE4Editor-ProceduralMapGenerator.suppressed.lib 라이브러리 및 C:\Git\Sample_Unreal_Parser\TestProject\Intermediate\Build\Win64\UE4Editor\Development\ProceduralMapGenerator\UE4Editor-ProceduralMapGenerator.suppressed.exp 개체를 생성하고 있습니다.
-    [29/29] TestProjectEditor.target
-  Total time in Parallel executor: 22.88 seconds
-  Total execution time: 27.68 seconds
+    [30/30] TestProjectEditor.target
+  Total time in Parallel executor: 20.88 seconds
+  Total execution time: 25.54 seconds

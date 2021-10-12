@@ -233,6 +233,7 @@
 /I Runtime\ClothingSystemRuntimeInterface\Public
 /I C:\Git\Sample_Unreal_Parser\TestProject\Intermediate\Build\Win64\UE4Editor\Inc\ProceduralMapGenerator
 /I C:\Git\Sample_Unreal_Parser\TestProject\Source
+/I C:\Git\Sample_Unreal_Parser\TestProject\Source\ProceduralMapGenerator\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\AugmentedReality
 /I Runtime\AugmentedReality\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\MRMesh

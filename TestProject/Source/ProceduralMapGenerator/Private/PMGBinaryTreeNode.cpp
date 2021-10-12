@@ -5,7 +5,13 @@
 
 PMGBinaryTreeNode::PMGBinaryTreeNode() : _ready(false)
 {
-    initialize();
+    Initialize();
+}
+
+PMGBinaryTreeNode::PMGBinaryTreeNode(RoomData roomData)
+{
+    _roomData = roomData;
+    Initialize();
 }
 
 PMGBinaryTreeNode::~PMGBinaryTreeNode()
@@ -20,7 +26,7 @@ PMGBinaryTreeNode::~PMGBinaryTreeNode()
     _rightNode = nullptr;
 }
 
-bool PMGBinaryTreeNode::initialize()
+bool PMGBinaryTreeNode::Initialize()
 {
     _leftNode = nullptr;
     _rightNode = nullptr;
@@ -30,15 +36,15 @@ bool PMGBinaryTreeNode::initialize()
     return true;
 }
 
-bool PMGBinaryTreeNode::destroy()
+bool PMGBinaryTreeNode::Destroy()
 {
     if (nullptr != _leftNode)
     {
-        _leftNode->destroy();
+        _leftNode->Destroy();
     }
     if (nullptr != _rightNode)
     {
-        _rightNode->destroy();
+        _rightNode->Destroy();
     }
 
     delete _leftNode;
@@ -50,21 +56,21 @@ bool PMGBinaryTreeNode::destroy()
     return true;
 }
 
-bool PMGBinaryTreeNode::setLeftNode(PMGBinaryTreeNode* node)
+bool PMGBinaryTreeNode::SetLeftNode(PMGBinaryTreeNode* node)
 {
     _leftNode = node;
 
     return true;
 }
 
-bool PMGBinaryTreeNode::setRightNode(PMGBinaryTreeNode* node)
+bool PMGBinaryTreeNode::SetRightNode(PMGBinaryTreeNode* node)
 {
     _rightNode = node;
 
     return true;
 }
 
-bool PMGBinaryTreeNode::setNode(PMGBinaryTreeNode* left, PMGBinaryTreeNode* right)
+bool PMGBinaryTreeNode::SetNode(PMGBinaryTreeNode* left, PMGBinaryTreeNode* right)
 {
     _leftNode   = left;
     _rightNode  = right;
@@ -72,7 +78,7 @@ bool PMGBinaryTreeNode::setNode(PMGBinaryTreeNode* left, PMGBinaryTreeNode* righ
     return true;
 }
 
-bool PMGBinaryTreeNode::setRoomData(RoomData& data)
+bool PMGBinaryTreeNode::SetRoomData(RoomData& data)
 {
     if ((false == _roomData._minVector.IsNearlyZero()) && (false == _roomData._maxVector.IsNearlyZero()))
     {
@@ -85,7 +91,7 @@ bool PMGBinaryTreeNode::setRoomData(RoomData& data)
     return true;
 }
 
-PMGBinaryTreeNode* PMGBinaryTreeNode::getLeftNode()
+PMGBinaryTreeNode* PMGBinaryTreeNode::GetLeftNode()
 {
     if (false == _ready)
     {
@@ -96,7 +102,7 @@ PMGBinaryTreeNode* PMGBinaryTreeNode::getLeftNode()
     return _leftNode;
 }
 
-PMGBinaryTreeNode* PMGBinaryTreeNode::getRightNode()
+PMGBinaryTreeNode* PMGBinaryTreeNode::GetRightNode()
 {
     if (false == _ready)
     {
@@ -107,7 +113,7 @@ PMGBinaryTreeNode* PMGBinaryTreeNode::getRightNode()
     return _rightNode;
 }
 
-RoomData& PMGBinaryTreeNode::getRoomData()
+RoomData& PMGBinaryTreeNode::GetRoomData()
 {
     if (false == _ready)
     {
