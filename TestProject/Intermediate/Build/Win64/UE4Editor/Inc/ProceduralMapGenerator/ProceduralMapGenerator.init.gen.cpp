@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeProceduralMapGenerator_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x4FD02BA5,
-				0x63EA9BF5,
+				0xC49ACFC8,
+				0xFA4E13D4,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

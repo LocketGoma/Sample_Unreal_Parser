@@ -27,7 +27,7 @@ private:
 	bool Initialize();
 
 public:
-	void SetInputParametors(uint32 count, uint32 height, uint32 width, uint32 size, uint32 tryCount);
+	void SetInputParametors(uint32 count,uint32 width, uint32 height, uint32 size, uint32 tryCount);
 	void InputCount(uint32 count);
 	void InputHeight(uint32 height);
 	void InputWidth(uint32 width);
@@ -40,7 +40,7 @@ public:
 
 private:
 	bool GenerateRoomData(uint32 runs);
-	bool GenerateRoomNodeRecursively(uint32 depth, PMGBinaryTreeNode* nowNode);
+	bool GenerateRoomNodeRecursively(uint32 depth, uint32 maxDepth, PMGBinaryTreeNode* nowNode);
 	
 
 //내부 세팅 인자들 (Generate할때 필요한 인자) - 기본값 : -1

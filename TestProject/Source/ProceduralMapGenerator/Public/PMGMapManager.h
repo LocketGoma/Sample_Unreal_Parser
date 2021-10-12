@@ -9,7 +9,14 @@
 
 //전방선언
 class UStaticMeshComponent;
-class AMapGenerator;
+class PMGMapGenerator;
+
+UENUM()
+enum class EGenerateType
+{
+	GenerateFromGenerator		UMETA(DisplayName = "GenerateFromGenerator"),
+	GenerateFromJson			UMETA(DisplayName = "GenerateFromJson")
+};
 
 UCLASS()
 class PROCEDURALMAPGENERATOR_API APMGMapManager : public AActor
@@ -38,6 +45,26 @@ public:
 
 //인자 조작관련
 public:
+	UPROPERTY(EditAnywhere);
+	TSubclassOf<class AActor> _OriginalRoomActor;
+
+
+	UPROPERTY(EditAnywhere, Category = "GenerateParametor | BaseParametor");
+	uint32 _height = 0;
+
+	UPROPERTY(EditAnywhere, Category = "GenerateParametor | BaseParametor");
+	uint32 _width = 0;
+
+	UPROPERTY(EditAnywhere, Category = "GenerateParametor | SizeParametor");
+	uint32 _count = 0;
+
+	UPROPERTY(EditAnywhere, Category = "GenerateParametor | SizeParametor");
+	uint32 _size = 0;
+
+	UPROPERTY(EditAnywhere, Category = "GenerateParametor | BaseParametor");
+	EGenerateType _generateType = EGenerateType::GenerateFromGenerator;
+		
+
 	bool SetInputParametors(uint32 count, uint32 height, uint32 width, uint32 size);
 
 //Map Make Part
@@ -50,6 +77,6 @@ public:
 
 //Generator Machine
 private:
-	//MapGenerator* roomGenerator;
+	PMGMapGenerator* _generator;
 
 };

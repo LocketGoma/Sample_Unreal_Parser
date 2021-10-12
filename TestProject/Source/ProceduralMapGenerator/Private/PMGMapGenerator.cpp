@@ -33,11 +33,11 @@ bool PMGMapGenerator::Initialize()
 	return true;
 }
 
-void PMGMapGenerator::SetInputParametors(uint32 count, uint32 height, uint32 width, uint32 size, uint32 tryCount)
+void PMGMapGenerator::SetInputParametors(uint32 count, uint32 width, uint32 height, uint32 size, uint32 tryCount)
 {
 	_makeCount = count;
-	_makeHeight = height;
 	_makeWidth = width;
+	_makeHeight = height;
 	_makeSize = size;
 	_maxTryExponential = tryCount;
 
@@ -46,7 +46,14 @@ void PMGMapGenerator::SetInputParametors(uint32 count, uint32 height, uint32 wid
 
 void PMGMapGenerator::InputCount(uint32 count)
 {
-	_makeCount = count;
+	if (_maxRoomCount < count)
+	{
+		_makeCount = _maxRoomCount;
+	}
+	else
+	{
+		_makeCount = count;
+	}
 }
 
 void PMGMapGenerator::InputHeight(uint32 height)
@@ -74,33 +81,39 @@ void PMGMapGenerator::GetRoomArray(RoomArray& roomarray)
 	roomarray = _roomArray;
 }
 
-bool PMGMapGenerator::GenerateRoom(uint32 runs)
+bool PMGMapGenerator::GenerateRoom(uint32 depth)
 {
 	_ready = false;
-	if (runs == 0)
+	if (depth == 0)
 	{
-		return GenerateRoomData(_maxRoomCount);
+		return GenerateRoomData(_maxTryExponential);
 	}
 
-	return GenerateRoomData(runs);
+	return GenerateRoomData(depth);
 }
 
-bool PMGMapGenerator::GenerateRoomData(uint32 runs)
+bool PMGMapGenerator::GenerateRoomData(uint32 depth)
 {
 	RoomData roomData;
 	roomData._maxVector = FVector(_makeWidth, _makeHeight, 1.0f);
 	_roomTree->setRoot(new PMGBinaryTreeNode(roomData));
 
-	return GenerateRoomNodeRecursively(0,_roomTree->getRoot());
+	return GenerateRoomNodeRecursively(0, depth,_roomTree->getRoot());
 }
 
-bool PMGMapGenerator::GenerateRoomNodeRecursively(uint32 depth, PMGBinaryTreeNode* nowNode)
+bool PMGMapGenerator::GenerateRoomNodeRecursively(uint32 depth, uint32 maxDepth, PMGBinaryTreeNode* nowNode)
 {
-	//1. 최대 시도 깊이 도달
-	if (4 <= depth)
+	//1. 최대 시도 (깊이) 도달
+	if (maxDepth <= depth)
 	{
 		return false;
 	}
+	if (_makeCount <= static_cast<uint32>(_roomArray.Num()))
+	{
+		return false;
+	}
+
+
 
 	//2. 최저 크기 미만
 	auto& roomData = nowNode->GetRoomData();
@@ -157,11 +170,11 @@ bool PMGMapGenerator::GenerateRoomNodeRecursively(uint32 depth, PMGBinaryTreeNod
 	nowNode->SetRightNode(new PMGBinaryTreeNode(rightNodeData));
 
 
-	if (false == GenerateRoomNodeRecursively(depth + 1, nowNode->GetLeftNode()))
+	if (false == GenerateRoomNodeRecursively(depth + 1, maxDepth, nowNode->GetLeftNode()))
 	{
 		_roomArray.Add(nowNode->GetLeftNode()->GetRoomData());		
 	}
-	if (false == GenerateRoomNodeRecursively(depth + 1, nowNode->GetRightNode()))
+	if (false == GenerateRoomNodeRecursively(depth + 1, maxDepth, nowNode->GetRightNode()))
 	{
 		_roomArray.Add(nowNode->GetRightNode()->GetRoomData());		
 	}
