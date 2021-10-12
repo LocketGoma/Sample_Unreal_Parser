@@ -67,7 +67,7 @@ public:
 
 	bool SetInputParametors(uint32 count, uint32 height, uint32 width, uint32 size);
 
-//Map Make Part
+//Map Make Part 
 public:
 	void MakeRoomFromGenerator();		//세팅된 제네레이터로 생성
 	void MakeRoomFromJson();			//읽어들인 Json파일에서 생성

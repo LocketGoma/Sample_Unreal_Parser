@@ -27,11 +27,11 @@ private:
 	bool Initialize();
 
 public:
-	void SetInputParametors(uint32 count,uint32 width, uint32 height, uint32 size, uint32 tryCount);
+	void SetInputParametors(uint32 count,uint32 width, uint32 height, uint32 interval, uint32 tryCount = 0);
 	void InputCount(uint32 count);
 	void InputHeight(uint32 height);
 	void InputWidth(uint32 width);
-	void InputSize(uint32 size);
+	void InputInterval(uint32 interval);
 	void SetTryExponential(uint32 tryCount);
 
 public:
@@ -48,16 +48,17 @@ private:
 	uint32 _makeCount;				//방 최대 개수
 	uint32 _makeHeight;				//맵 전체 높이
 	uint32 _makeWidth;				//맵 전체 폭
-	uint32 _makeSize;				//각 블럭당 폭
-	FVector _maxPositionSize;
-	FVector _minPositionSize;
+	uint32 _makeInterval;			//각 블럭당 폭
+	FVector _minPositionSize;	
 	uint32 _maxTryExponential;		//최대 쪼갤 회수
+
+	bool _roomGenerateLock;
 
 //내부 Lock 인자 (상수값)
 private:
-	const uint32 _maxRoomCount = 128;
-	const uint32 _maxTryCount = 1024;
-	const uint32 _precision = 1000; //(정확도)
+	const uint32 _maxRoomCount	= 128;
+	const uint32 _maxTryCount	= 1024;
+	const uint32 _precision		= 1000; //(정확도)
 
 //내부 데이터 전달용 인자
 private:

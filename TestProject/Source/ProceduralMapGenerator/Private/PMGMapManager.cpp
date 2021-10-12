@@ -34,9 +34,10 @@ void APMGMapManager::Tick(float DeltaTime)
 
 }
 
-bool APMGMapManager::SetInputParametors(uint32 count, uint32 width, uint32 height, uint32 size)
+bool APMGMapManager::SetInputParametors(uint32 count, uint32 width, uint32 height, uint32 interval)
 {
-	_generator->SetInputParametors(count, width, height, size, 128);
+	_generator->SetInputParametors(count, width, height, interval);
+	_generator->GenerateRoom(10);
 	return true;
 }
 

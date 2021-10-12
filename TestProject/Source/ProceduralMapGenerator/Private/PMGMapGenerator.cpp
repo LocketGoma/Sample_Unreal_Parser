@@ -21,8 +21,7 @@ bool PMGMapGenerator::Initialize()
 	_makeCount = 0;	
 	_makeHeight = 0;
 	_makeWidth = 0;	
-	_makeSize = 0;	
-	_maxPositionSize = FVector::OneVector;
+	_makeInterval = 0;
 	_minPositionSize = FVector::OneVector;
 	_maxTryExponential = _maxTryCount;		//최대 쪼갤 회수
 
@@ -30,16 +29,22 @@ bool PMGMapGenerator::Initialize()
 
 	_roomTree = new PMGBinaryTree();
 
+	_roomGenerateLock = false;
+
 	return true;
 }
 
-void PMGMapGenerator::SetInputParametors(uint32 count, uint32 width, uint32 height, uint32 size, uint32 tryCount)
+void PMGMapGenerator::SetInputParametors(uint32 count, uint32 width, uint32 height, uint32 interval, uint32 tryCount)
 {
-	_makeCount = count;
-	_makeWidth = width;
-	_makeHeight = height;
-	_makeSize = size;
-	_maxTryExponential = tryCount;
+	_makeCount		= count;
+	_makeWidth		= width;
+	_makeHeight		= height;
+	_makeInterval	= interval;
+
+	if (0 < tryCount)
+	{
+		_maxTryExponential = tryCount;
+	}
 
 	GenerateRoom(10);
 }
@@ -66,9 +71,9 @@ void PMGMapGenerator::InputWidth(uint32 width)
 	_makeWidth = width;
 }
 
-void PMGMapGenerator::InputSize(uint32 size)
+void PMGMapGenerator::InputInterval(uint32 interval)
 {
-	_makeSize = size;
+	_makeInterval = interval;
 }
 
 void PMGMapGenerator::SetTryExponential(uint32 tryCount)
@@ -103,35 +108,42 @@ bool PMGMapGenerator::GenerateRoomData(uint32 depth)
 
 bool PMGMapGenerator::GenerateRoomNodeRecursively(uint32 depth, uint32 maxDepth, PMGBinaryTreeNode* nowNode)
 {
+	//0. 더이상 작업하지 않음.
+	if (true == _roomGenerateLock)
+	{
+		return true;
+	}
+
 	//1. 최대 시도 (깊이) 도달
 	if (maxDepth <= depth)
 	{
 		return false;
 	}
+
+	//2. 최대 개수 도달
 	if (_makeCount <= static_cast<uint32>(_roomArray.Num()))
 	{
-		return false;
+		_roomGenerateLock = true;
+		return true;
 	}
 
-
-
-	//2. 최저 크기 미만
+	//3. 최저 크기 미만
 	auto& roomData = nowNode->GetRoomData();
-	if (((abs(roomData._maxVector.X - roomData._minVector.X)) < (_minPositionSize.X * 2)  ) || ((abs(roomData._maxVector.Y - roomData._minVector.Y)) < (_minPositionSize.Y * 2)))
+	if (((abs(roomData._maxVector.X - roomData._minVector.X)) < ((_minPositionSize.X+ _makeInterval) * 2)) || ((abs(roomData._maxVector.Y - roomData._minVector.Y)) < ((_minPositionSize.Y+ _makeInterval) * 2)))
 	{
 		return false;
 	}
 
-	//3. min > max
+	//4. min > max
 	if ((roomData._maxVector.X < roomData._minVector.X) || (roomData._maxVector.Y < roomData._minVector.Y))
 	{
 		return true;
 	}
-	//4. 다음 node (여기가 제일 중요)
+	//5. 다음 node (여기가 제일 중요)
 	RoomData leftNodeData;
 	RoomData rightNodeData;
 
-	//가로로 자르기 (X축 값 동일)
+	//1) 가로로 자르기 (X축 값 동일)
 	if ((abs(roomData._maxVector.X - roomData._minVector.X)) < (abs(roomData._maxVector.Y - roomData._minVector.Y)))
 	{
 		leftNodeData._minVector.X = roomData._minVector.X;
@@ -148,7 +160,7 @@ bool PMGMapGenerator::GenerateRoomNodeRecursively(uint32 depth, uint32 maxDepth,
 		rightNodeData._minVector.Y = cutHeight;
 
 	}
-	//세로로 자르기 (Y축 값 동일)
+	//2) 세로로 자르기 (Y축 값 동일)
 	else
 	{
 		leftNodeData._minVector.X = roomData._minVector.X;
@@ -172,11 +184,25 @@ bool PMGMapGenerator::GenerateRoomNodeRecursively(uint32 depth, uint32 maxDepth,
 
 	if (false == GenerateRoomNodeRecursively(depth + 1, maxDepth, nowNode->GetLeftNode()))
 	{
-		_roomArray.Add(nowNode->GetLeftNode()->GetRoomData());		
+		RoomData tempRoomData = nowNode->GetLeftNode()->GetRoomData();
+
+		tempRoomData._minVector.X += _makeInterval;
+		tempRoomData._minVector.Y += _makeInterval;
+		tempRoomData._maxVector.X -= _makeInterval;
+		tempRoomData._maxVector.Y -= _makeInterval;
+
+		_roomArray.Add(tempRoomData);
 	}
 	if (false == GenerateRoomNodeRecursively(depth + 1, maxDepth, nowNode->GetRightNode()))
 	{
-		_roomArray.Add(nowNode->GetRightNode()->GetRoomData());		
+		RoomData tempRoomData = nowNode->GetRightNode()->GetRoomData();
+
+		tempRoomData._minVector.X += _makeInterval;
+		tempRoomData._minVector.Y += _makeInterval;
+		tempRoomData._maxVector.X -= _makeInterval;
+		tempRoomData._maxVector.Y -= _makeInterval;
+
+		_roomArray.Add(tempRoomData);
 	}
 
 	return true;
