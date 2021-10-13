@@ -102,6 +102,10 @@ void EmptyLinkFunctionForGeneratedCodePMGMapManager() {}
 #endif
 		static const UE4CodeGen_Private::FUInt32PropertyParams NewProp__width;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp__depth_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUInt32PropertyParams NewProp__depth;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp__count_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FUInt32PropertyParams NewProp__count;
@@ -150,6 +154,13 @@ void EmptyLinkFunctionForGeneratedCodePMGMapManager() {}
 #endif
 	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UClass_APMGMapManager_Statics::NewProp__width = { "_width", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APMGMapManager, _width), METADATA_PARAMS(Z_Construct_UClass_APMGMapManager_Statics::NewProp__width_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APMGMapManager_Statics::NewProp__width_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APMGMapManager_Statics::NewProp__depth_MetaData[] = {
+		{ "Category", "GenerateParametor | BaseParametor" },
+		{ "ModuleRelativePath", "Public/PMGMapManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UClass_APMGMapManager_Statics::NewProp__depth = { "_depth", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APMGMapManager, _depth), METADATA_PARAMS(Z_Construct_UClass_APMGMapManager_Statics::NewProp__depth_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APMGMapManager_Statics::NewProp__depth_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APMGMapManager_Statics::NewProp__count_MetaData[] = {
 		{ "Category", "GenerateParametor | SizeParametor" },
 		{ "ModuleRelativePath", "Public/PMGMapManager.h" },
@@ -175,6 +186,7 @@ void EmptyLinkFunctionForGeneratedCodePMGMapManager() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APMGMapManager_Statics::NewProp__OriginalRoomActor,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APMGMapManager_Statics::NewProp__height,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APMGMapManager_Statics::NewProp__width,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APMGMapManager_Statics::NewProp__depth,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APMGMapManager_Statics::NewProp__count,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APMGMapManager_Statics::NewProp__size,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APMGMapManager_Statics::NewProp__generateType_Underlying,
@@ -207,7 +219,7 @@ void EmptyLinkFunctionForGeneratedCodePMGMapManager() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APMGMapManager, 3893215203);
+	IMPLEMENT_CLASS(APMGMapManager, 3865456135);
 	template<> PROCEDURALMAPGENERATOR_API UClass* StaticClass<APMGMapManager>()
 	{
 		return APMGMapManager::StaticClass();

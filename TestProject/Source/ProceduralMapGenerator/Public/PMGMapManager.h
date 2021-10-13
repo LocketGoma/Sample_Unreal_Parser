@@ -28,7 +28,7 @@ public:
 	APMGMapManager();
 
 private:
-	bool Initialize();
+	bool Initialize(void);
 
 protected:
 	// Called when the game starts or when spawned
@@ -55,6 +55,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = "GenerateParametor | BaseParametor");
 	uint32 _width = 0;
 
+	UPROPERTY(EditAnywhere, Category = "GenerateParametor | BaseParametor");
+	uint32 _depth = 0;
+
 	UPROPERTY(EditAnywhere, Category = "GenerateParametor | SizeParametor");
 	uint32 _count = 0;
 
@@ -69,11 +72,11 @@ public:
 
 //Map Make Part 
 public:
-	void MakeRoomFromGenerator();		//세팅된 제네레이터로 생성
-	void MakeRoomFromJson();			//읽어들인 Json파일에서 생성
+	void MakeRoomFromGenerator(void);		//세팅된 제네레이터로 생성
+	void MakeRoomFromJson(void);			//읽어들인 Json파일에서 생성
 
 
-	void ResetRoom();					//초기화
+	void ResetRoom(void);					//초기화
 
 //Generator Machine
 private:

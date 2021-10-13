@@ -13,8 +13,8 @@ class PMGBinaryTreeNode;
 class PMGMapGenerator
 {
 public:
-	PMGMapGenerator();
-	~PMGMapGenerator();
+	PMGMapGenerator(void);
+	~PMGMapGenerator(void);
 
 
 	//내부 필요 인자들

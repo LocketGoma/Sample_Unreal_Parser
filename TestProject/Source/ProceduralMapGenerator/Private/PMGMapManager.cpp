@@ -6,13 +6,19 @@
 
 
 // Sets default values
-APMGMapManager::APMGMapManager()
+APMGMapManager::APMGMapManager() : _generator(nullptr)
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = true;	
 
+	Initialize();
+}
+
+bool APMGMapManager::Initialize(void)
+{
 	_generator = new PMGMapGenerator();
 
+	return true;
 }
 
 // Called when the game starts or when spawned
@@ -36,6 +42,11 @@ void APMGMapManager::Tick(float DeltaTime)
 
 }
 
+void APMGMapManager::GetRoomArray(RoomArray& roomarray)
+{
+	_generator->GetRoomArray(roomarray);
+}
+
 bool APMGMapManager::SetInputParametors(uint32 count, uint32 width, uint32 height, uint32 interval)
 {
 	_generator->SetInputParametors(count, width, height, interval);
@@ -51,27 +62,20 @@ void APMGMapManager::MakeRoomFromGenerator()
 	FActorSpawnParameters spawnParametors;
 	for (int32 ii = 0; ii < roomArray.Num(); ++ii)
 	{
-		RoomData roomData = roomArray[ii];
+		FVector actorSpawnPosition = FVector(roomArray[ii]._minVector.X + ((roomArray[ii]._maxVector.X - roomArray[ii]._minVector.X) / 2), roomArray[ii]._minVector.Y + ((roomArray[ii]._maxVector.Y - roomArray[ii]._minVector.Y) / 2), 0.01) * 100;
+		FVector actorSpawnScale = FVector((roomArray[ii]._maxVector.X - roomArray[ii]._minVector.X), (roomArray[ii]._maxVector.Y - roomArray[ii]._minVector.Y), 1);
 
-		if (0 > roomArray[ii]._maxVector.X - roomArray[ii]._minVector.X)
-		{
-			;
-		}
-		if (0 > roomArray[ii]._maxVector.Y - roomArray[ii]._minVector.Y)
-		{
-			;
-		}
-
-
-		GetWorld()->SpawnActor<AActor>(_OriginalRoomActor, FVector(roomArray[ii]._minVector.X, roomArray[ii]._minVector.Y, 0.01)*100, FRotator(0,0,0), spawnParametors)->SetActorScale3D(FVector((roomArray[ii]._maxVector.X - roomArray[ii]._minVector.X)/10, (roomArray[ii]._maxVector.Y - roomArray[ii]._minVector.Y)/10, 1));
+		GetWorld()->SpawnActor<AActor>(_OriginalRoomActor, actorSpawnPosition, FRotator(0,0,0), spawnParametors)->SetActorScale3D(actorSpawnScale);
 	}
 
 }
 
 void APMGMapManager::MakeRoomFromJson()
 {
+	;
 }
 
 void APMGMapManager::ResetRoom()
 {
+	;
 }

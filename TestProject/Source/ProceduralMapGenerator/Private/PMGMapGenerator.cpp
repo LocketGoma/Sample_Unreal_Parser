@@ -4,16 +4,16 @@
 #include "PMGBinaryTree.h"
 #include "PMGBinaryTreeNode.h"
 
-PMGMapGenerator::PMGMapGenerator() : _ready(false), _roomTree(nullptr)
+PMGMapGenerator::PMGMapGenerator(void) : _ready(false), _roomTree(nullptr)
 {
 	Initialize();
 }
 
-PMGMapGenerator::~PMGMapGenerator()
+PMGMapGenerator::~PMGMapGenerator(void)
 {
 }
 
-bool PMGMapGenerator::Initialize()
+bool PMGMapGenerator::Initialize(void)
 {
 	_roomCount = 0;
 	_bridgeCount = 0;
@@ -27,7 +27,7 @@ bool PMGMapGenerator::Initialize()
 
 	_ready = true;
 
-	_roomTree = new PMGBinaryTree();
+	_roomTree = new PMGBinaryTree(void);
 
 	_roomGenerateLock = false;
 
@@ -184,7 +184,7 @@ bool PMGMapGenerator::GenerateRoomNodeRecursively(uint32 depth, uint32 maxDepth,
 
 	if (false == GenerateRoomNodeRecursively(depth + 1, maxDepth, nowNode->GetLeftNode()))
 	{
-		RoomData tempRoomData = roomData;
+		RoomData tempRoomData = nowNode->GetLeftNode()->GetRoomData();
 
 		tempRoomData._minVector.X += _makeInterval;
 		tempRoomData._minVector.Y += _makeInterval;
@@ -195,7 +195,7 @@ bool PMGMapGenerator::GenerateRoomNodeRecursively(uint32 depth, uint32 maxDepth,
 	}
 	if (false == GenerateRoomNodeRecursively(depth + 1, maxDepth, nowNode->GetRightNode()))
 	{
-		RoomData tempRoomData = roomData;
+		RoomData tempRoomData = nowNode->GetRightNode()->GetRoomData();
 
 		tempRoomData._minVector.X += _makeInterval;
 		tempRoomData._minVector.Y += _makeInterval;

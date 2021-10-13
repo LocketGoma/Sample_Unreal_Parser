@@ -3,18 +3,18 @@
 
 #include "PMGBinaryTreeNode.h"
 
-PMGBinaryTreeNode::PMGBinaryTreeNode() : _ready(false)
+PMGBinaryTreeNode::PMGBinaryTreeNode(void) : _ready(false)
 {
-    Initialize();
+    Initialize(void);
 }
 
 PMGBinaryTreeNode::PMGBinaryTreeNode(RoomData roomData)
 {
     _roomData = roomData;
-    Initialize();
+    Initialize(void);
 }
 
-PMGBinaryTreeNode::~PMGBinaryTreeNode()
+PMGBinaryTreeNode::~PMGBinaryTreeNode(void)
 {
     if (true == _ready)
     {
@@ -26,7 +26,7 @@ PMGBinaryTreeNode::~PMGBinaryTreeNode()
     _rightNode = nullptr;
 }
 
-bool PMGBinaryTreeNode::Initialize()
+bool PMGBinaryTreeNode::Initialize(void)
 {
     _leftNode = nullptr;
     _rightNode = nullptr;
@@ -36,15 +36,15 @@ bool PMGBinaryTreeNode::Initialize()
     return true;
 }
 
-bool PMGBinaryTreeNode::Destroy()
+bool PMGBinaryTreeNode::Destroy(void)
 {
     if (nullptr != _leftNode)
     {
-        _leftNode->Destroy();
+        _leftNode->Destroy(void);
     }
     if (nullptr != _rightNode)
     {
-        _rightNode->Destroy();
+        _rightNode->Destroy(void);
     }
 
     delete _leftNode;
@@ -91,7 +91,7 @@ bool PMGBinaryTreeNode::SetRoomData(RoomData& data)
     return true;
 }
 
-PMGBinaryTreeNode* PMGBinaryTreeNode::GetLeftNode()
+PMGBinaryTreeNode* PMGBinaryTreeNode::GetLeftNode(void)
 {
     if (false == _ready)
     {
@@ -102,7 +102,7 @@ PMGBinaryTreeNode* PMGBinaryTreeNode::GetLeftNode()
     return _leftNode;
 }
 
-PMGBinaryTreeNode* PMGBinaryTreeNode::GetRightNode()
+PMGBinaryTreeNode* PMGBinaryTreeNode::GetRightNode(void)
 {
     if (false == _ready)
     {
@@ -113,7 +113,7 @@ PMGBinaryTreeNode* PMGBinaryTreeNode::GetRightNode()
     return _rightNode;
 }
 
-RoomData& PMGBinaryTreeNode::GetRoomData()
+RoomData& PMGBinaryTreeNode::GetRoomData(void)
 {
     if (false == _ready)
     {

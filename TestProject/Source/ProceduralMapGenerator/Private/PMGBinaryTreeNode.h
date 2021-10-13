@@ -12,13 +12,13 @@ class PMGBinaryTreeNode
 {
 //持失切 / 社瑚切
 public:
-	PMGBinaryTreeNode();
+	PMGBinaryTreeNode(void);
 	PMGBinaryTreeNode(RoomData roomData);
-	~PMGBinaryTreeNode();
+	~PMGBinaryTreeNode(void);
 
 public:
-	bool				Initialize();
-	bool				Destroy();
+	bool				Initialize(void);
+	bool				Destroy(void);
 
 	bool				SetLeftNode(PMGBinaryTreeNode* node);
 	bool				SetRightNode(PMGBinaryTreeNode* node);
@@ -26,9 +26,9 @@ public:
 	bool				SetRoomData(RoomData& data);
 
 	//C2662
-	PMGBinaryTreeNode*	GetLeftNode();
-	PMGBinaryTreeNode*	GetRightNode();
-	RoomData&			GetRoomData();
+	PMGBinaryTreeNode*	GetLeftNode(void);
+	PMGBinaryTreeNode*	GetRightNode(void);
+	RoomData&			GetRoomData(void);
 
 
 private:

@@ -12,11 +12,11 @@ class PMGBinaryTreeNode;
 class PMGBinaryTree
 {
 public:
-	PMGBinaryTree();
-	~PMGBinaryTree();
+	PMGBinaryTree(void);
+	~PMGBinaryTree(void);
 
 public:
-	PMGBinaryTreeNode*	getRoot();
+	PMGBinaryTreeNode*	getRoot(void);
 	bool				setRoot(PMGBinaryTreeNode* root);
 	
 public:

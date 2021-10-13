@@ -19,7 +19,7 @@ public:
 
 protected:
 	// Called when the game starts
-	virtual void BeginPlay() override;
+	virtual void BeginPlay(void) override;
 
 public:	
 	// Called every frame
@@ -27,7 +27,7 @@ public:
 
 public:
 	void SetRoomData(RoomData& roomdata);
-	void SetTransformFromRoomData();
+	void SetTransformFromRoomData(void);
 
 private:
 	RoomData _roomData;
