@@ -807,6 +807,7 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2021.10.13-17.08.34:681][128]Cmd: MAP CHECKDEP NOCLEARLOG
 [2021.10.13-17.08.34:681][128]MapCheck: 맵 체크 완료: 오류 0 회, 경고 0 회, 소요 시간 0.107ms.
 [2021.10.13-17.08.34:681][128]LogFileHelpers: Loading map 'GeneratorTestLevel' took 0.018
+<<<<<<< HEAD
 [2021.10.13-17.09.25:115][488]LogUObjectHash: Compacting FUObjectHashTables data took   0.47ms
 [2021.10.13-17.09.25:128][488]LogSlate: Window 'TestProject - 언리얼 에디터' being destroyed
 [2021.10.13-17.09.25:130][488]LogWindowsTextInputMethodSystem: Display: IME system activated using TSF (Microsoft 입력기).
@@ -1342,3 +1343,5 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2021.10.13-17.09.27:158][489]LogD3D11RHI: CleanupD3DDevice
 [2021.10.13-17.09.27:166][489]LogExit: Exiting.
 [2021.10.13-17.09.27:173][489]Log file closed, 10/14/21 02:09:27
+=======
+>>>>>>> bd41377... Map Generator로 나온 결과값 실제 레벨에 출력, 코드 정리
