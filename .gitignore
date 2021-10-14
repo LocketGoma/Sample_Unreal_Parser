@@ -50,6 +50,14 @@
 SourceArt/**/*.png
 SourceArt/**/*.tga
 
+# UnrealEngine Generated Files 
+*/Build 
+*/Binaries 
+*/DerivedDataCache 
+*/Intermediate 
+*/Saved
+
+
 # Binary Files
 Binaries/*
 Plugins/*/Binaries/*
