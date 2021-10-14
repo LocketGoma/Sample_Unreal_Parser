@@ -26,10 +26,10 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 public:
-	void SetRoomData(RoomData& roomdata);
+	void SetRoomData(FRoomData& roomdata);
 	void SetTransformFromRoomData(void);
 
 private:
-	RoomData _roomData;
+	FRoomData _roomData;
 		
 };

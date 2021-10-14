@@ -3,20 +3,20 @@
 
 #include "PMGBinaryTreeNode.h"
 
-PMGBinaryTreeNode::PMGBinaryTreeNode(void) : _ready(false)
+PMGBinaryTreeNode::PMGBinaryTreeNode(void) : _bReady(false)
 {
-    Initialize(void);
+    Initialize();
 }
 
-PMGBinaryTreeNode::PMGBinaryTreeNode(RoomData roomData)
+PMGBinaryTreeNode::PMGBinaryTreeNode(RoomData roomDataNode)
 {
-    _roomData = roomData;
-    Initialize(void);
+    _roomDataNode = roomDataNode;
+    Initialize();
 }
 
 PMGBinaryTreeNode::~PMGBinaryTreeNode(void)
 {
-    if (true == _ready)
+    if (true == _bReady)
     {
         //에러 발생. (메모리 누수 위험)
         _ASSERT("Memory leak!");
@@ -26,46 +26,42 @@ PMGBinaryTreeNode::~PMGBinaryTreeNode(void)
     _rightNode = nullptr;
 }
 
-bool PMGBinaryTreeNode::Initialize(void)
+void PMGBinaryTreeNode::Initialize(void)
 {
     _leftNode = nullptr;
     _rightNode = nullptr;
 
-    _ready = true;
-
-    return true;
+    _bReady = true;    
 }
 
-bool PMGBinaryTreeNode::Destroy(void)
+void PMGBinaryTreeNode::Destroy(void)
 {
     if (nullptr != _leftNode)
     {
-        _leftNode->Destroy(void);
+        _leftNode->Destroy();
     }
     if (nullptr != _rightNode)
     {
-        _rightNode->Destroy(void);
+        _rightNode->Destroy();
     }
 
     delete _leftNode;
     delete _rightNode;
 
-    _ready = false;
+    _bReady = false;
 
+}
+
+bool PMGBinaryTreeNode::SetLeftNode(PMGBinaryTreeNode* leftNode)
+{
+    _leftNode = leftNode;
 
     return true;
 }
 
-bool PMGBinaryTreeNode::SetLeftNode(PMGBinaryTreeNode* node)
+bool PMGBinaryTreeNode::SetRightNode(PMGBinaryTreeNode* rightNode)
 {
-    _leftNode = node;
-
-    return true;
-}
-
-bool PMGBinaryTreeNode::SetRightNode(PMGBinaryTreeNode* node)
-{
-    _rightNode = node;
+    _rightNode = rightNode;
 
     return true;
 }
@@ -78,22 +74,22 @@ bool PMGBinaryTreeNode::SetNode(PMGBinaryTreeNode* left, PMGBinaryTreeNode* righ
     return true;
 }
 
-bool PMGBinaryTreeNode::SetRoomData(RoomData& data)
+bool PMGBinaryTreeNode::SetRoomData(RoomData& roomDataNode)
 {
-    if ((false == _roomData._minVector.IsNearlyZero()) && (false == _roomData._maxVector.IsNearlyZero()))
+    if ((false == _roomDataNode._vMinVector.IsNearlyZero()) && (false == _roomDataNode._vMaxVector.IsNearlyZero()))
     {
         //이미 값이 들어간 노드이므로 추가 값을 못넣도록 제한.
         return false;
     }
 
-    _roomData = data;
+    _roomDataNode = roomDataNode;
 
     return true;
 }
 
 PMGBinaryTreeNode* PMGBinaryTreeNode::GetLeftNode(void)
 {
-    if (false == _ready)
+    if (false == _bReady)
     {
         //경고 발생
         _ASSERT("Data Not Set!");
@@ -104,7 +100,7 @@ PMGBinaryTreeNode* PMGBinaryTreeNode::GetLeftNode(void)
 
 PMGBinaryTreeNode* PMGBinaryTreeNode::GetRightNode(void)
 {
-    if (false == _ready)
+    if (false == _bReady)
     {
         //경고 발생
         _ASSERT("Data Not Set!");
@@ -113,14 +109,14 @@ PMGBinaryTreeNode* PMGBinaryTreeNode::GetRightNode(void)
     return _rightNode;
 }
 
-RoomData& PMGBinaryTreeNode::GetRoomData(void)
+FRoomData& PMGBinaryTreeNode::GetRoomData(void)
 {
-    if (false == _ready)
+    if (false == _bReady)
     {
         //경고 발생
         _ASSERT("Data Not Set!");        
     }
 
-    return _roomData;
+    return _roomDataNode;
     
 }

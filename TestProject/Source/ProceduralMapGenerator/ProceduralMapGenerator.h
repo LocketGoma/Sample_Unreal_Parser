@@ -9,19 +9,19 @@ typedef struct RoomData
 public:
 	RoomData()
 	{
-		_minVector = FVector::ZeroVector;
-		_maxVector = FVector::ZeroVector;
+		_vMinVector = FVector::ZeroVector;
+		_vMaxVector = FVector::ZeroVector;
 	}
-	RoomData(FVector& minVector, FVector& maxVector)
+	RoomData(FVector& vMinVector, FVector& vMaxVector)
 	{
-		_minVector = minVector;
-		_maxVector = maxVector;
+		_vMinVector = vMinVector;
+		_vMaxVector = vMaxVector;
 	}
 
 public:
-	FVector _minVector;
-	FVector _maxVector;
+	FVector _vMinVector;
+	FVector _vMaxVector;
 
-}RoomData;
+}FRoomData;
 
-typedef TArray<RoomData> RoomArray;
+typedef TArray<FRoomData> FArrayOfRoomData;

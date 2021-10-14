@@ -9,16 +9,16 @@ PMGBinaryTree::PMGBinaryTree(void)
 
 PMGBinaryTree::~PMGBinaryTree(void)
 {
-	_root->Destroy(void);
+	_root->Destroy();
 	delete _root;
 }
 
-PMGBinaryTreeNode* PMGBinaryTree::getRoot(void)
+PMGBinaryTreeNode* PMGBinaryTree::GetRoot(void)
 {
 	return _root;
 }
 
-bool PMGBinaryTree::setRoot(PMGBinaryTreeNode* root)
+bool PMGBinaryTree::SetRoot(PMGBinaryTreeNode* root)
 {
 	if (nullptr == root)
 	{

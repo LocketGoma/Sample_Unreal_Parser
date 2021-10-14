@@ -8,27 +8,27 @@
 /**
  * 
  */
+//PMG서브시스템
 class PMGBinaryTreeNode
 {
 //생성자 / 소멸자
 public:
 	PMGBinaryTreeNode(void);
-	PMGBinaryTreeNode(RoomData roomData);
+	PMGBinaryTreeNode(RoomData roomDataNode);
 	~PMGBinaryTreeNode(void);
 
 public:
-	bool				Initialize(void);
-	bool				Destroy(void);
+	void				Initialize(void);
+	void				Destroy(void);
 
-	bool				SetLeftNode(PMGBinaryTreeNode* node);
-	bool				SetRightNode(PMGBinaryTreeNode* node);
-	bool				SetNode(PMGBinaryTreeNode* left, PMGBinaryTreeNode* right);
-	bool				SetRoomData(RoomData& data);
+	bool				SetLeftNode(PMGBinaryTreeNode* leftNode);
+	bool				SetRightNode(PMGBinaryTreeNode* rightNode);
+	bool				SetNode(PMGBinaryTreeNode* leftNode, PMGBinaryTreeNode* rightNode);
+	bool				SetRoomData(RoomData& roomDataNode);
 
-	//C2662
 	PMGBinaryTreeNode*	GetLeftNode(void);
 	PMGBinaryTreeNode*	GetRightNode(void);
-	RoomData&			GetRoomData(void);
+	FRoomData&			GetRoomData(void);
 
 
 private:
@@ -36,8 +36,8 @@ private:
 	PMGBinaryTreeNode* _rightNode;
 
 	//DataNode
-	RoomData			_roomData;
+	FRoomData			_roomDataNode;
 
-	bool				_ready;				//사용여부
+	bool				_bReady;				//사용여부
 
 };

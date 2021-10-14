@@ -31,14 +31,14 @@ void URoomComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorC
 	// ...
 }
 
-void URoomComponent::SetRoomData(RoomData& roomdata)
+void URoomComponent::SetRoomData(FRoomData& roomdata)
 {
 	_roomData = roomdata;
 }
 
 void URoomComponent::SetTransformFromRoomData()
 {
-	GetOwner()->GetRootComponent()->SetRelativeScale3D(FVector(_roomData._maxVector.X - _roomData._minVector.X, _roomData._maxVector.Y - _roomData._minVector.Y, _roomData._maxVector.Z - _roomData._minVector.Z));
+	GetOwner()->GetRootComponent()->SetRelativeScale3D(FVector(_roomData._vMaxVector.X - _roomData._vMinVector.X, _roomData._vMaxVector.Y - _roomData._vMinVector.Y, _roomData._vMaxVector.Z - _roomData._vMinVector.Z));
 	GetOwner()->GetRootComponent()->SetUsingAbsoluteScale(true);
 }
 

@@ -41,7 +41,7 @@ public:
 public:
 
 	//const RoomArray& GetRoomArray();
-	void GetRoomArray(RoomArray& roomarray);
+	void GetRoomArray(FArrayOfRoomData& roomarray);
 
 //인자 조작관련
 public:
@@ -80,6 +80,6 @@ public:
 
 //Generator Machine
 private:
-	PMGMapGenerator* _generator;
+	PMGMapGenerator* _PMGGenerator;
 
 };

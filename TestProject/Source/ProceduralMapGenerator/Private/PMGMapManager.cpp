@@ -6,7 +6,7 @@
 
 
 // Sets default values
-APMGMapManager::APMGMapManager() : _generator(nullptr)
+APMGMapManager::APMGMapManager() : _PMGGenerator(nullptr)
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;	
@@ -16,7 +16,7 @@ APMGMapManager::APMGMapManager() : _generator(nullptr)
 
 bool APMGMapManager::Initialize(void)
 {
-	_generator = new PMGMapGenerator();
+	_PMGGenerator = new PMGMapGenerator();
 
 	return true;
 }
@@ -42,28 +42,28 @@ void APMGMapManager::Tick(float DeltaTime)
 
 }
 
-void APMGMapManager::GetRoomArray(RoomArray& roomarray)
+void APMGMapManager::GetRoomArray(FArrayOfRoomData& roomarray)
 {
-	_generator->GetRoomArray(roomarray);
+	_PMGGenerator->GetRoomArray(roomarray);
 }
 
 bool APMGMapManager::SetInputParametors(uint32 count, uint32 width, uint32 height, uint32 interval)
 {
-	_generator->SetInputParametors(count, width, height, interval);
-	_generator->GenerateRoom(10);
+	_PMGGenerator->SetInputParametors(count, width, height, interval);
+	_PMGGenerator->GenerateRoom(10);
 	return true;
 }
 //100 = 1m = 100% (scale x 1)
 void APMGMapManager::MakeRoomFromGenerator()
 {
-	RoomArray roomArray;
-	_generator->GetRoomArray(roomArray);
+	FArrayOfRoomData roomArray;
+	_PMGGenerator->GetRoomArray(roomArray);
 
 	FActorSpawnParameters spawnParametors;
 	for (int32 ii = 0; ii < roomArray.Num(); ++ii)
 	{
-		FVector actorSpawnPosition = FVector(roomArray[ii]._minVector.X + ((roomArray[ii]._maxVector.X - roomArray[ii]._minVector.X) / 2), roomArray[ii]._minVector.Y + ((roomArray[ii]._maxVector.Y - roomArray[ii]._minVector.Y) / 2), 0.01) * 100;
-		FVector actorSpawnScale = FVector((roomArray[ii]._maxVector.X - roomArray[ii]._minVector.X), (roomArray[ii]._maxVector.Y - roomArray[ii]._minVector.Y), 1);
+		FVector actorSpawnPosition = FVector(roomArray[ii]._vMinVector.X + ((roomArray[ii]._vMaxVector.X - roomArray[ii]._vMinVector.X) / 2), roomArray[ii]._vMinVector.Y + ((roomArray[ii]._vMaxVector.Y - roomArray[ii]._vMinVector.Y) / 2), 0.01) * 100;
+		FVector actorSpawnScale = FVector((roomArray[ii]._vMaxVector.X - roomArray[ii]._vMinVector.X), (roomArray[ii]._vMaxVector.Y - roomArray[ii]._vMinVector.Y), 1);
 
 		GetWorld()->SpawnActor<AActor>(_OriginalRoomActor, actorSpawnPosition, FRotator(0,0,0), spawnParametors)->SetActorScale3D(actorSpawnScale);
 	}

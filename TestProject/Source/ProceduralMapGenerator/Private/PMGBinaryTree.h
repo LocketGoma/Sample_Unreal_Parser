@@ -7,7 +7,7 @@
 /**
  * 
  */
-
+//PMG 서브시스템
 class PMGBinaryTreeNode;
 class PMGBinaryTree
 {
@@ -16,8 +16,8 @@ public:
 	~PMGBinaryTree(void);
 
 public:
-	PMGBinaryTreeNode*	getRoot(void);
-	bool				setRoot(PMGBinaryTreeNode* root);
+	PMGBinaryTreeNode*	GetRoot(void);
+	bool				SetRoot(PMGBinaryTreeNode* root);
 	
 public:
 	void PreOrderTraversal(PMGBinaryTreeNode* Node);
