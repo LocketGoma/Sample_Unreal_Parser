@@ -1,9 +1,0 @@
-{
-	"BuildId": "14830424",
-	"Modules": 
-	{
-		"JsonParser": "UE4Editor-JsonParser-5566.dll",
-		"ProceduralMapGenerator": "UE4Editor-ProceduralMapGenerator-5505.dll",
-		"TestProject": "UE4Editor-TestProject-1343.dll"
-	}
-}

@@ -1,5 +1,0 @@
-C:\Git\Sample_Unreal_Parser\TestProject\Intermediate\Build\Win64\UE4Editor\Development\JsonParser\Definitions.JsonParser.h
-C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-C:\Git\Sample_Unreal_Parser\TestProject\Source\JsonParser/TestActorA.h
-C:\Git\Sample_Unreal_Parser\TestProject\Intermediate\Build\Win64\UE4Editor\Inc\JsonParser\TestActorA.generated.h

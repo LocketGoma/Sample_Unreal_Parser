@@ -1,3 +1,0 @@
-C:\Git\Sample_Unreal_Parser\TestProject\Intermediate\Build\Win64\UE4Editor\Development\ProceduralMapGenerator\Definitions.ProceduralMapGenerator.h
-C:\Git\Sample_Unreal_Parser\TestProject\Source\ProceduralMapGenerator\Private\PMGBinaryTreeNode.h
-C:\Git\Sample_Unreal_Parser\TestProject\Source\ProceduralMapGenerator\Private\../ProceduralMapGenerator.h
